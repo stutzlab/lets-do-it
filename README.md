@@ -77,7 +77,7 @@ Do you have a certain POSTMAN file, or and tricky command line that you used dur
   * release the software for partial users and monitor logs
   * plan and do "production tests" being near real users and hearing/taking to them
 
-In summary:
+**TL/DR**:
 * Technical Leaders will check for Issues and MR/PR with labels "Review"
 * Programmers will check for Issues and MR/PR with labels "TODO"
 * Testers will check for Issues marked with "Test"
