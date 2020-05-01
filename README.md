@@ -1,7 +1,7 @@
 # lets-do-it
 See here the practices and behaviors we employ at creating things
 
-Join us and improve those practises by work!
+Join us and improve those practices by experience...
 
 ## For Developers
 
@@ -14,17 +14,16 @@ The core development orbits around:
 * A **Technical Leader** is a programmer who talks to architects/specialists to define architecture, prioritize issues, reviews Merge/Pull Requests and acts like a Scrum Master when needed for helping programmers do their job. Development decisions go here. Lots of communication with programmers must occur here.
 * A **Programmer** (backend/ui/datascientist/infrastructure etc), that does most of the hard work
 * A **Tester** which helps the developer to certify the software, normally when the software is already running on staging server
-* A **Infrastructure Guy** which is concerned about runtime costs, cloud engineering, monitoring and platform availability
+* A **Infrastructure Guy** who is concerned about runtime costs, cloud engineering, monitoring and platform availability
 
 
 ### Backlog - things to do
 
 For describing the **backlog** of a project, we use **Issues/Milestones** from Github or Gilab both for public and private projects.
 
-**Milestones** indicates what must be delivered when and normally is where we anchor a public or internal contract with who is paying the bills. Milestones are important because it is a means of communication to people outside the project. Without milestone it is hard to explain to someone what is being done and what are the priorities when you have dozens of open issues in a lake!
+**Milestones** indicates what must be delivered when and normally is where we anchor a public or internal contract with who is paying the bills. Milestones are important because it is a means of communication to people outside the project. Without milestones it is hard to explain to someone what is being done, what will be delivered when and what are the priorities when you have dozens of open issues!
 
-Please take a look at https://guides.github.com/features/issues/.
-
+Please take a look at https://guides.github.com/features/issues/
 
 ### Codebase - things done
 
@@ -72,7 +71,11 @@ Do you have a certain POSTMAN file, or and tricky command line that you used dur
 10. A tester will look for issues marked with "Test" and test them in a stage server
   * normally the team will have a automatic CI/CD environment setup for that
   * when finding an error, comment about the error, take print screens showing details about the context the error ocurred and change the label of the issue to "TODO" so that the programmer will take a look
-11. After all tests are passed and you have a stable code running, the Technical Leader will release the software by merging it to the "master" branch and running it in production. Planning is needed here when real customers are using your software to avoid blackouts.
+  * if you think something is strange here, ask people to use it in staging
+11. After all tests are passed and you have a stable code running, the Technical Leader will release the software by merging it to the "master" branch and running it in production
+  * planning is needed here when real customers are using your software to avoid blackouts
+  * release the software for partial users and monitor logs
+  * plan and do "production tests" being near real users and hearing/taking to them
 
 In summary:
 * Technical Leaders will check for Issues and MR/PR with labels "Review"
@@ -80,18 +83,20 @@ In summary:
 * Testers will check for Issues marked with "Test"
 * Everyone will communicate mainly using comments and mentions on Issues and MR/PR
 * Everyone will continuously check and communicate if something seems out of order to help one another
+* If the project is too simple, some of the practices above may be skipped, but the communication must still work well
 
-### Typical Architecture
+### Typical Architecture/Engineering Guidances
 
 * Microservices
  * one microservice may have several containers
  * database is part of the microservice
  * the microservice talks to one another mainly using REST interfaces (Kafka interfaces or other means may be used, but must be stable and documented)
  * Keep the containers as small as feasible for good testing
+ * https://martinfowler.com/articles/microservices.html
 * Docker 99.9% of the time - for development, staging, production
  * Check https://github.com/flaviostutz/docker-manifest for best practices using Docker
-* Always Web/Internet/Cloud protocols based
 * Docker Swarm for Container Clusters
+* Always Web/Internet/Cloud protocols based
 * Golang/NodeJS for Backend
 * React Native iOS/Android/Web for Frontend
 * MQTT for async UI interconnections
@@ -102,5 +107,4 @@ In summary:
 * Grafana for monitoring infrastructure/business panels
 * Prometheus for microservices monitoring
 * MySQL/PostgreSQL for relational database
-
-
+* Check for some tools/pocs/components as example at http://github.com/flaviostutz and http://github.com/tiagostutz
