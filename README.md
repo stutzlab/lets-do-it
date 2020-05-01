@@ -62,6 +62,7 @@ Do you have a certain POSTMAN file, or and tricky command line that you used dur
 6. The Technical Leader will mark the next issues to be done with label "TODO"
 7. The Programmer will get any issues marked with "TODO" and develop in a feature branch with the name of the issue (see Gitflow)
   * If the programmer need any help (help coding, help deciding, help explaning), ask for help in comments. Mention who you think would better help you.
+  * Always assign the issue to you when working on it so that others know someone is doing the job
 8. Commits in this branch must have a reference to the issue being developed in commit log. Ex.: "#closes 24"
   * During your work, comment the issue your are working on with "/spend 30min" etc so that you will get paid ;)
 9. After finished the issue development, send a Merge/Pull Request to the "develop" branch with label "Review" so the Technical Leader or someone he asks to will review the code, preferably run it locally and accept the new code
