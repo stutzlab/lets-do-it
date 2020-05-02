@@ -49,7 +49,7 @@ As a practise we differentiate Software Components in **/build** groups and depl
 
 It is part of the developer job to document, implement and test technical things so that other developers know how to collaborate in a project without too much burden.
 
-Do you have a certain POSTMAN file, or and tricky command line that you used during development for testing parts of the software? Probably other developers would like to have access to this line too. A great place to put those things is in the README.md file inside the Git repository itself. Be a friend of other developers! You don't have to wait until having a component of great documentation about something. Use the README as the place for storing even loosy or incomplete commands that you use. It is better than nothing.
+Do you have a certain POSTMAN file, or and tricky command line that you used during development for testing parts of the software? Probably other developers would like to have access to this line too. A great place to put those things is in the README.md file inside the Git repository itself. Be a friend of other developers! You don't have to wait until having a great documentation about something. Just start writing things and during the time you enhance it. Evolve documentation as you evolve the software itself. Use the README as a place for storing even loosy or incomplete commands that you use. It is better than nothing.
 
 
 ### Typical Workflow - putting all together
@@ -64,7 +64,7 @@ Do you have a certain POSTMAN file, or and tricky command line that you used dur
   * If the programmer need any help (help coding, help deciding, help explaning), ask for help in comments. Mention who you think would better help you.
   * Always assign the issue to you when working on it so that others know someone is doing the job
 8. Commits in this branch must have a reference to the issue being developed in commit log. Ex.: "#closes 24"
-  * During your work, comment the issue your are working on with "/spend 30min" etc so that you will get paid ;)
+  * During your work, comment the issue your are working on with "/spend 30min" etc so that you will get paid ;) - Read https://docs.gitlab.com/ee/user/project/time_tracking.html
 9. After finished the issue development, send a Merge/Pull Request to the "develop" branch with label "Review" so the Technical Leader or someone he asks to will review the code, preferably run it locally and accept the new code
  * If there are any doubts or requests to the programmer use comments in Merge/Pull Request and apply the label "TODO"
  * MR/PR will be closed and the feature branch will be removed after it is accepted
