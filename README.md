@@ -49,6 +49,8 @@ As a practise we differentiate Software Components in **/build** groups and depl
 
 It is part of the developer job to document, implement and test technical things so that other developers know how to collaborate in a project without too much burden.
 
+On the main README.md of a project, place all instructions needed for a new developer to prepare his/her environment and run the basic functions of your project. Guide a "demo" to you fellows (you will need it too in some time). Check an example at https://github.com/flaviostutz/schellar
+
 Do you have a certain POSTMAN file, or and tricky command line that you used during development for testing parts of the software? Probably other developers would like to have access to this line too. A great place to put those things is in the README.md file inside the Git repository itself. Be a friend of other developers! You don't have to wait until having a great documentation about something. Just start writing things and during the time you enhance it. Evolve documentation as you evolve the software itself. Use the README as a place for storing even loosy or incomplete commands that you use. It is better than nothing.
 
 
